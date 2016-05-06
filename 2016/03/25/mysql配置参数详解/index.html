@@ -1,0 +1,748 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="mysql配置参数,mysql性能优化," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="PengJieran's blog" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="mysql配置参数详解">
+<meta property="og:type" content="article">
+<meta property="og:title" content="mysql配置参数详解">
+<meta property="og:url" content="http://pengjieran.github.io/2016/03/25/mysql配置参数详解/index.html">
+<meta property="og:site_name" content="PengJieran's blog">
+<meta property="og:description" content="mysql配置参数详解">
+<meta property="og:updated_time" content="2016-05-01T13:58:44.301Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="mysql配置参数详解">
+<meta name="twitter:description" content="mysql配置参数详解">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Aaron'
+    }
+  };
+</script>
+
+  <title> mysql配置参数详解 | PengJieran's blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">PengJieran's blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">pengjieran@gmail.com</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-heartbeat fa-fw"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                mysql配置参数详解
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-25T22:20:19+08:00" content="2016-03-25">
+              2016-03-25
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/mysql/" itemprop="url" rel="index">
+                    <span itemprop="name">mysql</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/03/25/mysql配置参数详解/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/03/25/mysql配置参数详解/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/03/25/mysql配置参数详解/" class="leancloud_visitors" data-flag-title="mysql配置参数详解">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="mysql配置参数详解"><a href="#mysql配置参数详解" class="headerlink" title="mysql配置参数详解"></a>mysql配置参数详解</h1><a id="more"></a>
+<p>my.ini（Linux系统下是my.cnf）,当mysql服务器启动时它会读取这个文件，设置相关的运行环境参数。<br></p><p>my.ini分为两块：Client Section和Server Section。Client Section用来配置MySQL客户端参数。要查看配置参数可以用下面的命令：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">show variables like <span class="string">'%innodb%'</span>; <span class="comment"># 查看innodb相关配置参数</span></span><br><span class="line">show status like <span class="string">'%innodb%'</span>; <span class="comment"># 查看innodb相关的运行时参数（比如当前正在打开的表的数量，当前已经打开的表的数量）</span></span><br><span class="line">show global status like <span class="string">'open%tables'</span>; <span class="comment"># 查看全局的运行时参数，加上global是对当前mysql服务器中运行的所有数据库实例进行统</span></span><br><span class="line"><span class="comment">#计。不加global则只对当前数据库实例进行统计。</span></span><br></pre></td></tr></table></figure><br><br>1. Client Section<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">[client]</span><br><span class="line">port = 3306 <span class="comment">#设置mysql客户端连接服务端时默认使用的端口</span></span><br><span class="line">[mysql]</span><br><span class="line">default-character-set=utf8 <span class="comment">#设置mysql客户端默认字符集</span></span><br></pre></td></tr></table></figure><br><br>2. Server Section<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">[mysqld]</span><br><span class="line">port=3306 <span class="comment">#mysql服务端默认监听(listen on)的TCP/IP端口</span></span><br><span class="line">basedir=<span class="string">"C:/Program Files/MySQL/MySQL5.5/"</span> <span class="comment"># 基准路径，其他路径都相对于这个路径</span></span><br><span class="line">datadir=<span class="string">"C:/Program Files/MySQL/MySQL Server 5.5/Data"</span> <span class="comment"># mysql数据库文件所在目录</span></span><br><span class="line">character-set-server=latin1 <span class="comment"># 服务端使用的字符集默认为8比特编码的latin1字符集</span></span><br><span class="line">default-storage-engine=INNODB <span class="comment"># 创建新表时将使用的默认存储引擎</span></span><br><span class="line">sql-mode=<span class="string">"STRICT_TRANS_TABLES,NO_AUTO_CREATE_USER,NO_ENGINE_SUBSTITUTION"</span> <span class="comment"># SQL模式为strict模式</span></span><br><span class="line">max_connections=100 <span class="comment"># mysql服务器支持的最大并发连接数（用户数）。但总会预留其中的一个连接给管理员使用超级权限登录，即使</span></span><br><span class="line"><span class="comment">#连接数目达到最大限制。如果设置得过小而用户比较多，会经常出现“Too many connections”错误。</span></span><br><span class="line">query_cache_size=0 <span class="comment"># 查询缓存大小，用于缓存SELECT查询结果。如果有许多返回相同查询结果的SELECT查询，并且很少改变表，可以</span></span><br><span class="line"><span class="comment">#设置query_cache_size大于0，可以极大改善查询效率。而如果表数据频繁变化，就不要使用这个，会适得其反</span></span><br><span class="line">table_cache=256 <span class="comment"># 这个参数在5.1.3之后的版本中叫做table_open_cache，用于设置table高速缓存的数量。由于每个客户端连接都会至</span></span><br><span class="line"><span class="comment">#少访问一个表，因此此参数的值与max_connections有关。</span></span><br><span class="line"><span class="comment">#当某一连接访问一个表时，MySQL会检查当前已缓存表的数量。如果该表已经在缓存中打开，则会直接访问缓存中的表已加快查询速度；</span></span><br><span class="line"><span class="comment">#如果该表未被缓存，则会将当前的表添加进缓存并进行查询。在执行缓存操作之前，table_cache用于限制缓存表的最大数目：如果当前</span></span><br><span class="line"><span class="comment">#已经缓存的表未达到table_cache，则会将新表添加进来；若已经达到此值，MySQL将根据缓存表的最后查询时间、查询率等规则释放之</span></span><br><span class="line"><span class="comment">#前的缓存。</span></span><br><span class="line">tmp_table_size=34M <span class="comment"># 内存中的每个临时表允许的最大大小。如果临时表大小超过该值，临时表将自动转为基于磁盘的表（Disk Based Table）。</span></span><br><span class="line">thread_cache_size=8 <span class="comment"># 缓存的最大线程数。当客户端连接断开时，如果客户端总连接数小于该值，则处理客户端任务的线程放回缓存。</span></span><br><span class="line"><span class="comment"># 在高并发情况下，如果该值设置得太小，就会有很多线程频繁创建，线程创建的开销会变大，查询效率也会下降。一般来说如果在应用</span></span><br><span class="line"><span class="comment"># 端有良好的多线程处理，这个参数对性能不会有太大的提高。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># MyISAM相关参数</span></span><br><span class="line">myisam_max_sort_file_size=100G <span class="comment"># mysql重建索引时允许使用的临时文件最大大小</span></span><br><span class="line">myisam_sort_buffer_size=68M</span><br><span class="line">key_buffer_size=54M <span class="comment"># Key Buffer大小，用于缓存MyISAM表的索引块。决定数据库索引处理的速度（尤其是索引读）</span></span><br><span class="line"><span class="built_in">read</span>_buffer_size=64K <span class="comment"># 用于对MyISAM表全表扫描时使用的缓冲区大小。针对每个线程进行分配（前提是进行了全表扫描）。进行排序</span></span><br><span class="line"><span class="comment"># 查询时，MySql会首先扫描一遍该缓冲，以避免磁盘搜索，提高查询速度，如果需要排序大量数据，可适当调高该值。但MySql会为每个</span></span><br><span class="line"><span class="comment"># 客户连接发放该缓冲空间，所以应尽量适当设置该值，以避免内存开销过大。</span></span><br><span class="line"><span class="built_in">read</span>_rnd_buffer_size=256K</span><br><span class="line">sort_buffer_size=256K <span class="comment"># connection级参数（为每个线程配置），500个线程将消耗500*256K的sort_buffer_size。</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># InnoDB相关参数</span></span><br><span class="line">innodb_additional_mem_pool_size=3M <span class="comment"># InnoDB用于存储元数据信息的内存池大小，一般不需修改</span></span><br><span class="line">innodb_flush_<span class="built_in">log</span>_at_trx_commit =1 <span class="comment"># 事务相关参数，如果值为1，则InnoDB在每次commit都会将事务日志写入磁盘（磁盘IO消耗较大），</span></span><br><span class="line"><span class="comment"># 这样保证了完全的ACID特性。而如果设置为0，则表示事务日志写入内存log和内存log写入磁盘的频率都为1次/秒。如果设为2则表示事</span></span><br><span class="line"><span class="comment"># 务日志在每次commit都写入内存log，但内存log写入磁盘的频率为1次/秒。</span></span><br><span class="line">innodb_<span class="built_in">log</span>_buffer_size=2M <span class="comment"># InnoDB日志数据缓冲大小，如果缓冲满了，就会将缓冲中的日志数据写入磁盘（flush）。由于一般至少</span></span><br><span class="line"><span class="comment"># 都1秒钟会写一次磁盘，所以没必要设置过大，即使是长事务。</span></span><br><span class="line">innodb_buffer_pool_size=105M <span class="comment"># InnoDB使用缓冲池来缓存索引和行数据。该值设置的越大，则磁盘IO越少。一般将该值设为物理内存的80%。</span></span><br><span class="line">innodb_<span class="built_in">log</span>_file_size=53M <span class="comment"># 每一个InnoDB事务日志的大小。一般设为innodb_buffer_pool_size的25%到100%</span></span><br><span class="line">innodb_thread_concurrency=9 <span class="comment"># InnoDB内核最大并发线程数。</span></span><br></pre></td></tr></table></figure><br><br></p><p>在Apache, PHP, MySQL的体系架构中，MySQL对于性能的影响最大，也是关键的核心部分。对于Discuz!论坛程序也是如此，MySQL的设<br>置是否合理优化，直接影响到论坛的速度和承载量！同时，MySQL也是优化难度最大的一个部分，不但需要理解一些MySQL专业知识，同时<br>还需要长时间的观察统计并且根据经验进行判断，然后设置合理的参数。 下面我们了解一下MySQL优化的一些基础，MySQL的优化我分为<br>两个部分，一是服务器物理硬件的优化，二是MySQL自身(my.cnf)的优化。 <br><strong>一、服务器硬件对MySQL性能的影响 <br></strong><br>1. 磁盘寻道能力（磁盘I/O）,以目前高转速SCSI硬盘(7200转/秒)为例，这种硬盘理论上每秒寻道7200次，这是物理特性决定的，没有办<br>法改变。MySQL每秒钟都在进行大量、复杂的查询操作，对磁盘的读写量可想而知。所以，通常认为磁盘I/O是制约MySQL性能的最大因素之一，<br>对于日均访问量在100万PV以上的Discuz!论坛，由于磁盘I/O的制约，MySQL的性能会非常低下！解决这一制约因素可以考虑以下几<br>种解决方案： 使用RAID-0+1磁盘阵列，注意不要尝试使用RAID-5，MySQL在RAID-5磁盘阵列上的效率不会像你期待的那样快。 <br>2. CPU<br>对于MySQL应用，推荐使用S.M.P.架构的多路对称CPU，例如：可以使用两颗Intel Xeon 3.6GHz的CPU，现在我较推荐用4U的服务器来专门<br>做数据库服务器，不仅仅是针对于mysql。 <br>3. 物理内存对于一台使用MySQL的Database Server来说，服务器内存建议不要小于2GB，<br>推荐使用4GB以上的物理内存，不过内存对于现在的服务器而言可以说是一个可以忽略的问题，工作中遇到了高端服务器基本上内存都超<br>过了16G。 <br><br>二、MySQL自身因素当解决了上述服务器硬件制约因素后，让我们看看MySQL自身的优化是如何操作的。对MySQL自身<br>的优化主要是对其配置文件my.cnf中的各项参数进行优化调整。下面我们介绍一些对性能影响较大的参数。 由于my.cnf文件的优化设置<br>是与服务器硬件配置息息相关的，因而我们指定一个假想的服务器硬件环境：CPU: 2颗Intel Xeon 2.4GHz 内存: 4GB DDR 硬盘: SCSI<br>73GB(很常见的2U服务器)。 <br><br><br>下面，我们根据以上硬件配置结合一份已经优化好的<strong>my.cnf进行说明：</strong> <br><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#vim /etc/my.cnf以下只列出my.cnf文件中[mysqld]段落中的内容，其他段落内容对MySQL运行性能影响甚微，因而姑且忽略。</span></span><br><span class="line">[mysqld]</span><br><span class="line">port = 3306</span><br><span class="line">serverid = 1</span><br><span class="line">socket = /tmp/mysql.sock</span><br><span class="line">skip-locking <span class="comment">#避免MySQL的外部锁定，减少出错几率增强稳定性。</span></span><br><span class="line">skip-name-resolve <span class="comment">#禁止MySQL对外部连接进行DNS解析，使用这一选项可以消除MySQL进行DNS解析的时间。但需要注意，如果开启该选</span></span><br><span class="line"><span class="comment"># 项，则所有远程主机连接授权都要使用IP地址方式，否则MySQL将无法正常处理连接请求！</span></span><br><span class="line">back_<span class="built_in">log</span> = 384 <span class="comment">#back_log参数的值指出在MySQL暂时停止响应新请求之前的短时间内多少个请求可以被存在堆栈中。 如果系统在一个短</span></span><br><span class="line"><span class="comment">#时间内有很多连接，则需要增大该参数的值，该参数值指定到来的TCP/IP连接的侦听队列的大小。不同的操作系统在这个队列大小上有</span></span><br><span class="line"><span class="comment">#它自己的限制。 试图设定back_log高于你的操作系统的限制将是无效的。默认值为50。对于Linux系统推荐设置为小于512的整数。</span></span><br><span class="line">key_buffer_size = 256M <span class="comment">#key_buffer_size指定用于索引的缓冲区大小，增加它可得到更好的索引处理性能。对于内存在4GB左右的服务</span></span><br><span class="line"><span class="comment">#器该参数可设置为256M或384M。注意：该参数值设置的过大反而会是服务器整体效率降低！</span></span><br><span class="line">max_allowed_packet = 4M</span><br><span class="line">thread_stack = 256K</span><br><span class="line">table_cache = 128K</span><br><span class="line">sort_buffer_size = 6M <span class="comment">#查询排序时所能使用的缓冲区大小。注意：该参数对应的分配内存是每连接独占，如果有100个连接，</span></span><br><span class="line">那么实际分配的总共排序缓冲区大小为100 × 6 ＝ 600MB。所以，对于内存在4GB左右的服务器推荐设置为6-8M。</span><br><span class="line"><span class="built_in">read</span>_buffer_size = 4M <span class="comment">#读查询操作所能使用的缓冲区大小。和sort_buffer_size一样，该参数对应的分配内存也是每连接独享。</span></span><br><span class="line">join_buffer_size = 8M <span class="comment">#联合查询操作所能使用的缓冲区大小，和sort_buffer_size一样，该参数对应的分配内存也是每连接独享。</span></span><br><span class="line">myisam_sort_buffer_size = 64M</span><br><span class="line">table_cache = 512</span><br><span class="line">thread_cache_size = 64</span><br><span class="line">query_cache_size = 64M <span class="comment">#指定MySQL查询缓冲区的大小。可以通过在MySQL控制台观察，如果Qcache_lowmem_prunes的值非常大，则表明</span></span><br><span class="line"><span class="comment"># 经常出现缓冲不够的情况；如果Qcache_hits的值非常大，则表明查询缓冲使用非常频繁，如果该值较小反而会影响效率，那么可以考</span></span><br><span class="line"><span class="comment"># 虑不用查询缓冲；Qcache_free_blocks，如果该值非常大，则表明缓冲区中碎片很多。</span></span><br><span class="line">tmp_table_size = 256M</span><br><span class="line">max_connections = 768 <span class="comment">#指定MySQL允许的最大连接进程数。如果在访问论坛时经常出现Too Many Connections的错误提 示，则需要增</span></span><br><span class="line"><span class="comment"># 大该参数值。</span></span><br><span class="line">max_connect_errors = 10000000</span><br><span class="line"><span class="built_in">wait</span>_timeout = 10 <span class="comment">#指定一个请求的最大连接时间，对于4GB左右内存的服务器可以设置为5-10。</span></span><br><span class="line">thread_concurrency = 8 <span class="comment">#该参数取值为服务器逻辑CPU数量*2，在本例中，服务器有2颗物理CPU，而每颗物理CPU又支持H.T超线程，所以实际取值为4*2=8</span></span><br><span class="line">skip-networking <span class="comment">#开启该选项可以彻底关闭MySQL的TCP/IP连接方式，如果WEB服务器是以远程连接的方式访问MySQL数据库服务器则不要开启该选项！否则将无法正常连接！</span></span><br><span class="line">table_cache=1024 <span class="comment">#物理内存越大,设置就越大.默认为2402,调到512-1024最佳</span></span><br><span class="line">innodb_additional_mem_pool_size=4M <span class="comment">#默认为2M</span></span><br><span class="line">innodb_flush_<span class="built_in">log</span>_at_trx_commit=1 <span class="comment">#设置为0就是等到innodb_log_buffer_size列队满后再统一储存,默认为1</span></span><br><span class="line">innodb_<span class="built_in">log</span>_buffer_size=2M <span class="comment">#默认为1M</span></span><br><span class="line">innodb_thread_concurrency=8 <span class="comment">#你的服务器CPU有几个就设置为几,建议用默认一般为8</span></span><br><span class="line">key_buffer_size=256M <span class="comment">#默认为218，调到128最佳</span></span><br><span class="line">tmp_table_size=64M <span class="comment">#默认为16M，调到64-256最挂</span></span><br><span class="line"><span class="built_in">read</span>_buffer_size=4M <span class="comment">#默认为64K</span></span><br><span class="line"><span class="built_in">read</span>_rnd_buffer_size=16M <span class="comment">#默认为256K</span></span><br><span class="line">sort_buffer_size=32M <span class="comment">#默认为256K</span></span><br><span class="line">thread_cache_size=120 <span class="comment">#默认为60</span></span><br><span class="line">query_cache_size=32M</span><br></pre></td></tr></table></figure><br><br>※值得注意的是： <br><strong>很多情况需要具体情况具体分析 <br></strong>一、如果Key_reads太大，则应该把my.cnf中Key_buffer_size变大，保持Key_reads/Key_read_requests至少1/100以上，越小越好。 <br>二、如果Qcache_lowmem_prunes很大，就要增加Query_cache_size的值。</p>
+      
+    </div>
+
+    <div>
+      
+        
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/mysql配置参数/" rel="tag">#mysql配置参数</a>
+          
+            <a href="/tags/mysql性能优化/" rel="tag">#mysql性能优化</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/04/25/redis参数配置/" rel="prev" title="redis参数配置">
+                redis参数配置 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/03/25/mysql配置参数详解/"
+           data-title="mysql配置参数详解" data-url="http://pengjieran.github.io/2016/03/25/mysql配置参数详解/">
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/logo.png"
+               alt="PengJieran" />
+          <p class="site-author-name" itemprop="name">PengJieran</p>
+          <p class="site-description motion-element" itemprop="description">低调做人，高调做事，保持空杯心态，继续加油！</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">10</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#mysql配置参数详解"><span class="nav-number">1.</span> <span class="nav-text">mysql配置参数详解</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy;  2014 - 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">PengJieran</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+    
+  
+
+  <script type="text/javascript">
+    var duoshuoQuery = {short_name:"pengjieran"};
+    (function() {
+      var ds = document.createElement('script');
+      ds.type = 'text/javascript';ds.async = true;
+      ds.id = 'duoshuo-script';
+      ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+      ds.charset = 'UTF-8';
+      (document.getElementsByTagName('head')[0]
+      || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+  </script>
+
+  
+    
+  
+
+
+
+
+
+  
+  
+  
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("54FEjnBw1Vcjtpi6iegek828-gzGzoHsz", "QA1eF4PqJGC5QszpoXY190Ow");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+
+</body>
+</html>
