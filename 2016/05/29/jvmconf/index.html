@@ -68,7 +68,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="jvm," />
 
 
 
@@ -86,15 +86,16 @@
 
 
 
-<meta name="description" content="低调做人，高调做事，保持空杯心态，继续加油！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="PengJieran's blog">
-<meta property="og:url" content="http://pengjieran.github.io/archives/2016/03/index.html">
+<meta name="description" content="本文主要提供jvm中各种jvm配置参数的解释，具体如何配置还需要根据使用环境而定，这里只标明每个参数配置项的意义。持续更新中。。。。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="jvm配置参数详解">
+<meta property="og:url" content="http://pengjieran.github.io/2016/05/29/jvmconf/index.html">
 <meta property="og:site_name" content="PengJieran's blog">
-<meta property="og:description" content="低调做人，高调做事，保持空杯心态，继续加油！">
+<meta property="og:description" content="本文主要提供jvm中各种jvm配置参数的解释，具体如何配置还需要根据使用环境而定，这里只标明每个参数配置项的意义。持续更新中。。。。">
+<meta property="og:updated_time" content="2016-05-29T12:24:29.739Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="PengJieran's blog">
-<meta name="twitter:description" content="低调做人，高调做事，保持空杯心态，继续加油！">
+<meta name="twitter:title" content="jvm配置参数详解">
+<meta name="twitter:description" content="本文主要提供jvm中各种jvm配置参数的解释，具体如何配置还需要根据使用环境而定，这里只标明每个参数配置项的意义。持续更新中。。。。">
 
 
 
@@ -112,7 +113,7 @@
   };
 </script>
 
-  <title> 归档 | PengJieran's blog </title>
+  <title> jvm配置参数详解 | PengJieran's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -133,7 +134,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  page-archive  ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -241,66 +242,157 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
-
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 9 篇日志。 继续努力。
-    </span>
-
+  <div id="posts" class="posts-expand">
     
 
-      
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                jvm配置参数详解
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-29T20:01:36+08:00" content="2016-05-29">
+              2016-05-29
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/jvm配置/" itemprop="url" rel="index">
+                    <span itemprop="name">jvm配置</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/29/jvmconf/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/29/jvmconf/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+             <span id="/2016/05/29/jvmconf/" class="leancloud_visitors" data-flag-title="jvm配置参数详解">
+               &nbsp; | &nbsp;
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               <span class="post-meta-item-text">阅读次数 </span>
+               <span class="leancloud-visitors-count"></span>
+              </span>
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
       
 
       
+        <p>本文主要提供jvm中各种jvm配置参数的解释，具体如何配置还需要根据使用环境而定，这里只标明每个参数配置项的意义。持续更新中。。。。<br><a id="more"></a></p>
+<h1 id="JVM配置参数列表"><a href="#JVM配置参数列表" class="headerlink" title="JVM配置参数列表"></a>JVM配置参数列表</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 当一个方法被调用10000次后就被JIT编译</span></span><br><span class="line">-XX:CompileThreshold=10000</span><br><span class="line"><span class="comment"># server模式下，对于一些频繁抛出的异常，JDK为了性能会做一个优化，在JIT重新编译后会抛出没有堆栈的异常，这个配置会关闭这种优化</span></span><br><span class="line">-XX:-OmitStackTraceInFastThrow</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2016">2016</h2>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/jvm/" rel="tag">#jvm</a>
+          
         </div>
       
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/05/25/tomcat1/" rel="next" title="tomcat内存及线程池配置">
+                <i class="fa fa-chevron-left"></i> tomcat内存及线程池配置
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
 
       
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/03/25/mysql配置参数详解/" itemprop="url">
-              
-                <span itemprop="name">mysql配置参数详解</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-03-25T22:20:19+08:00"
-              content="2016-03-25" >
-          03-25
-        </time>
-      </div>
-
-    </header>
+      
+    </footer>
   </article>
 
 
 
-    
-
-  </section>
-
-  
-
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -308,6 +400,14 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div class="ds-thread" data-thread-key="2016/05/29/jvmconf/"
+           data-title="jvm配置参数详解" data-url="http://pengjieran.github.io/2016/05/29/jvmconf/">
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -327,8 +427,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+      <section class="site-overview sidebar-panel ">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/logo.png"
@@ -385,6 +494,17 @@
 
       </section>
 
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#JVM配置参数列表"><span class="nav-number">1.</span> <span class="nav-text">JVM配置参数列表</span></a></li></ol></div>
+            
+          </div>
+        </section>
       
 
     </div>
@@ -481,11 +601,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
 
 
   

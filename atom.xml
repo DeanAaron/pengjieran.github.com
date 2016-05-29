@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://pengjieran.github.io/"/>
-  <updated>2016-05-27T14:12:34.830Z</updated>
+  <updated>2016-05-29T12:24:29.739Z</updated>
   <id>http://pengjieran.github.io/</id>
   
   <author>
@@ -16,11 +16,35 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>jvm配置参数详解</title>
+    <link href="http://pengjieran.github.io/2016/05/29/jvmconf/"/>
+    <id>http://pengjieran.github.io/2016/05/29/jvmconf/</id>
+    <published>2016-05-29T12:01:36.000Z</published>
+    <updated>2016-05-29T12:24:29.739Z</updated>
+    
+    <content type="html">&lt;p&gt;本文主要提供jvm中各种jvm配置参数的解释，具体如何配置还需要根据使用环境而定，这里只标明每个参数配置项的意义。持续更新中。。。。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;JVM配置参数列表&quot;&gt;&lt;a href=&quot;#JVM配置参数列表&quot; class=&quot;headerlink&quot; title=&quot;JVM配置参数列表&quot;&gt;&lt;/a&gt;JVM配置参数列表&lt;/h1&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 当一个方法被调用10000次后就被JIT编译&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-XX:CompileThreshold=10000&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# server模式下，对于一些频繁抛出的异常，JDK为了性能会做一个优化，在JIT重新编译后会抛出没有堆栈的异常，这个配置会关闭这种优化&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-XX:-OmitStackTraceInFastThrow&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;本文主要提供jvm中各种jvm配置参数的解释，具体如何配置还需要根据使用环境而定，这里只标明每个参数配置项的意义。持续更新中。。。。&lt;br&gt;
+    
+    </summary>
+    
+      <category term="jvm配置" scheme="http://pengjieran.github.io/categories/jvm%E9%85%8D%E7%BD%AE/"/>
+    
+    
+      <category term="jvm" scheme="http://pengjieran.github.io/tags/jvm/"/>
+    
+  </entry>
+  
+  <entry>
     <title>tomcat内存及线程池配置</title>
     <link href="http://pengjieran.github.io/2016/05/25/tomcat1/"/>
     <id>http://pengjieran.github.io/2016/05/25/tomcat1/</id>
     <published>2016-05-25T07:40:46.000Z</published>
-    <updated>2016-05-27T14:12:34.830Z</updated>
+    <updated>2016-05-29T12:25:21.987Z</updated>
     
     <content type="html">&lt;p&gt;本篇文章主要介绍tomcat中jvm，线程池的配置方式&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -40,6 +64,8 @@
       &lt;p&gt;本篇文章主要介绍tomcat中jvm，线程池的配置方式&lt;/p&gt;
     
     </summary>
+    
+      <category term="tomcat配置" scheme="http://pengjieran.github.io/categories/tomcat%E9%85%8D%E7%BD%AE/"/>
     
     
       <category term="tomcat" scheme="http://pengjieran.github.io/tags/tomcat/"/>
