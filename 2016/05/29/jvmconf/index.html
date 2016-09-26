@@ -92,7 +92,7 @@
 <meta property="og:url" content="http://pengjieran.github.io/2016/05/29/jvmconf/index.html">
 <meta property="og:site_name" content="PengJieran's blog">
 <meta property="og:description" content="本文主要提供jvm中各种jvm配置参数的解释，具体如何配置还需要根据使用环境而定，这里只标明每个参数配置项的意义。持续更新中。。。。">
-<meta property="og:updated_time" content="2016-06-05T14:30:26.777Z">
+<meta property="og:updated_time" content="2016-09-26T09:30:45.655Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="jvm配置参数详解">
 <meta name="twitter:description" content="本文主要提供jvm中各种jvm配置参数的解释，具体如何配置还需要根据使用环境而定，这里只标明每个参数配置项的意义。持续更新中。。。。">
@@ -112,6 +112,11 @@
     }
   };
 </script>
+
+
+
+
+  <link rel="canonical" href="http://pengjieran.github.io/2016/05/29/jvmconf/"/>
 
   <title> jvm配置参数详解 | PengJieran's blog </title>
 </head>
@@ -349,6 +354,7 @@
     <div>
       
         
+
       
     </div>
 
@@ -379,6 +385,10 @@
           </div>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/09/26/marry/" rel="prev" title="我要结婚啦!">
+                我要结婚啦! <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -445,12 +455,12 @@
                src="/images/logo.png"
                alt="PengJieran" />
           <p class="site-author-name" itemprop="name">PengJieran</p>
-          <p class="site-description motion-element" itemprop="description">低调做人，高调做事，保持空杯心态，继续加油！</p>
+          <p class="site-description motion-element" itemprop="description">经验不是经历。用别人的经验解决一个问题不难，难的是自己从头走一遍这条路，更加难的是推翻前人的经验对一个问题能够有自己的看法和领悟。</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">9</span>
+              <span class="site-state-item-count">10</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -458,7 +468,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">8</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -467,7 +477,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
@@ -530,7 +540,7 @@
 </div>
 
 <div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 强力驱动
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
 </div>
 
 <div class="theme-info">
@@ -636,14 +646,18 @@
 
   
     
+    <script src="/vendors/ua-parser-js/dist/ua-parser.min.js?v=0.7.9"></script>
+    <script src="/js/src/hook-duoshuo.js"></script>
   
 
 
 
 
 
+
   
   
+
   
 
   
@@ -678,6 +692,14 @@
             var element = document.getElementById(url);
 
             $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
           }
         })
         .fail(function (object, error) {

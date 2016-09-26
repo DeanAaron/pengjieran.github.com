@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://pengjieran.github.io/"/>
-  <updated>2016-06-05T14:30:26.777Z</updated>
+  <updated>2016-09-26T10:03:22.308Z</updated>
   <id>http://pengjieran.github.io/</id>
   
   <author>
@@ -16,11 +16,39 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>我要结婚啦!</title>
+    <link href="http://pengjieran.github.io/2016/09/26/marry/"/>
+    <id>http://pengjieran.github.io/2016/09/26/marry/</id>
+    <published>2016-09-26T10:00:00.000Z</published>
+    <updated>2016-09-26T10:03:22.308Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;执子之手，与子偕老！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;iframe frameborder=&quot;no&quot; width=&quot;100%&quot; height=&quot;550&quot; src=&quot;http://oe2e83k4s.bkt.clouddn.com/videos/1080p.mp4&quot; allowfullscreen&gt; &lt;/iframe&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;执子之手，与子偕老！&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+      <category term="life" scheme="http://pengjieran.github.io/categories/life/"/>
+    
+    
+      <category term="life" scheme="http://pengjieran.github.io/tags/life/"/>
+    
+  </entry>
+  
+  <entry>
     <title>jvm配置参数详解</title>
     <link href="http://pengjieran.github.io/2016/05/29/jvmconf/"/>
     <id>http://pengjieran.github.io/2016/05/29/jvmconf/</id>
     <published>2016-05-29T12:01:36.000Z</published>
-    <updated>2016-06-05T14:30:26.777Z</updated>
+    <updated>2016-09-26T09:30:45.655Z</updated>
     
     <content type="html">&lt;p&gt;本文主要提供jvm中各种jvm配置参数的解释，具体如何配置还需要根据使用环境而定，这里只标明每个参数配置项的意义。持续更新中。。。。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;h1 id=&quot;JVM配置参数列表&quot;&gt;&lt;a href=&quot;#JVM配置参数列表&quot; class=&quot;headerlink&quot; title=&quot;JVM配置参数列表&quot;&gt;&lt;/a&gt;JVM配置参数列表&lt;/h1&gt;&lt;h2 id=&quot;堆大小设置&quot;&gt;&lt;a href=&quot;#堆大小设置&quot; class=&quot;headerlink&quot; title=&quot;堆大小设置&quot;&gt;&lt;/a&gt;堆大小设置&lt;/h2&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;13&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;14&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;15&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;-Xmx3550m               &lt;span class=&quot;comment&quot;&gt;# 设置jvm最大可用内存大小为3550m&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-Xms3550m               &lt;span class=&quot;comment&quot;&gt;# 设置jvm初始内存为3550m.此设置可与Xmx相同，避免每次垃圾回收后jvm重新分配内存&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-Xmn2g                  &lt;span class=&quot;comment&quot;&gt;# 设置年轻代为2g，整个堆大小=年轻代大小+年老代大小+持久代大小。持久代一般固定大小为64m，所以增大年轻代后，将会减少年老代大小，此值对系统性能影响较大，Sun官方推荐配置为整个堆的3/8&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-Xss128k                &lt;span class=&quot;comment&quot;&gt;# 设置每个线程的堆栈大小。JDK5.0以后每个线程堆栈大小为1M，以前每个线程堆栈大小为256K。更具应用的线程所需内存大小进行调整。在相同物理内 存下，减小这个值能生成更多的线程。但是操作系统对一个进程内的线程数还是有限制的，不能无限生成，经验值在3000~5000左右。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-XX:NewRatio=4          &lt;span class=&quot;comment&quot;&gt;# 设置年轻代（包括Eden和两个Survivo区）与年老代的比值，除去持久代。设置为4,则年轻代与年老代所占比值为1:4，年轻代占整个堆栈的1/5&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-XX:SurvivorRatio=4     &lt;span class=&quot;comment&quot;&gt;# 设置年轻代中Eden区与Survivor区的大小比值。设置为4，则两个Survivor区与一个Eden区的比值为2:4,一个Servivor区占整个年轻代的1/6&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-XX:MaxTenuringThreshold=0      &lt;span class=&quot;comment&quot;&gt;# 设置垃圾最大年轻。如果设置为0,则年轻代对象不经过Survivor区，直接进入年老代。对于年老代比较多的应用，可以提高效率。如果将此值设置为一个较大值，则年轻代对象会在Survivor区进行多次复制，这样可以增加对象在年轻代的存活时间，增加在年轻代被回收的概率。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-XX:PermSize=64m                &lt;span class=&quot;comment&quot;&gt;#设置非堆内存初始值，默认是物理内存的1/64，在数据量很大的文件导出时，一定要把这个值设置上，否则会出现内存溢出。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;-XX:MaxPermSize=16m             &lt;span class=&quot;comment&quot;&gt;# 设置最大非堆内存的大小，默认是物理内存的1/4。那么，如果是物理内存4GB，那么64分之一就是64MB，这就是PermSize默认值，也就是永生代内存初始大小；四分之一是1024MB，这就是MaxPermSize默认大小。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# MaxPermSize缺省值和-server -client选项相关。&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# -server选项下默认MaxPermSize为64m&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# -client选项下默认MaxPermSize为32m&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;# 这两个参数现在JDK8中被-XX:MetaspaceSize=size和-XX:MaxMetaspaceSize=size元空间所替代&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
