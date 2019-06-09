@@ -1,0 +1,1398 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/needsharebutton/needsharebutton.css">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.2" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+  <meta name="description" content="本文主要整理各大IDE在mac平台和windows平台下的一些实用的快捷键，因为笔者也是基于这两个平台做开发，有时候忘记快捷键是一件很痛苦的事，特此记录。">
+<meta name="keywords" content="实用快捷键">
+<meta property="og:type" content="article">
+<meta property="og:title" content="各大IDE快捷键整理">
+<meta property="og:url" content="https://blog.examplecn.com/2017/12/10/IDE快捷键/index.html">
+<meta property="og:site_name" content="Java大杂烩">
+<meta property="og:description" content="本文主要整理各大IDE在mac平台和windows平台下的一些实用的快捷键，因为笔者也是基于这两个平台做开发，有时候忘记快捷键是一件很痛苦的事，特此记录。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-04-02T06:26:50.956Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="各大IDE快捷键整理">
+<meta name="twitter:description" content="本文主要整理各大IDE在mac平台和windows平台下的一些实用的快捷键，因为笔者也是基于这两个平台做开发，有时候忘记快捷键是一件很痛苦的事，特此记录。">
+
+
+
+  <link rel="alternate" href="/atom.xml" title="Java大杂烩" type="application/atom+xml">
+
+
+
+  
+  
+  <link rel="canonical" href="https://blog.examplecn.com/2017/12/10/IDE快捷键/">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>各大IDE快捷键整理 | Java大杂烩</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Java大杂烩</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+      
+        <p class="site-subtitle">机会永远只给有准备的人。</p>
+      
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+    </ul>
+  
+
+  
+
+  
+</nav>
+
+
+
+  
+
+
+
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://blog.examplecn.com/2017/12/10/IDE快捷键/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Aaron">
+      <meta itemprop="description" content="经验不是经历。用别人的经验解决一个问题不难，难的是自己从头走一遍这条路，更加难的是推翻前人的经验对一个问题能够有自己的看法和领悟。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Java大杂烩">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">各大IDE快捷键整理
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2017-12-10 21:20:17" itemprop="dateCreated datePublished" datetime="2017-12-10T21:20:17+08:00">2017-12-10</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2019-04-02 14:26:50" itemprop="dateModified" datetime="2019-04-02T14:26:50+08:00">2019-04-02</time>
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/eclipse快捷键-idea快捷键/" itemprop="url" rel="index"><span itemprop="name">eclipse快捷键,idea快捷键</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/2017/12/10/IDE快捷键/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/2017/12/10/IDE快捷键/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+            <span id="/2017/12/10/IDE快捷键/" class="leancloud_visitors" data-flag-title="各大IDE快捷键整理">
+              <span class="post-meta-divider">|</span>
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读次数：</span>
+              
+                <span class="leancloud-visitors-count"></span>
+            </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>本文主要整理各大IDE在mac平台和windows平台下的一些实用的快捷键，因为笔者也是基于这两个平台做开发，有时候忘记快捷键是一件很痛苦的事，特此记录。</p>
+<a id="more"></a>
+
+<h1 id="eclipse快捷键"><a href="#eclipse快捷键" class="headerlink" title="eclipse快捷键"></a>eclipse快捷键</h1><h2 id="mac平台下常用快捷键："><a href="#mac平台下常用快捷键：" class="headerlink" title="mac平台下常用快捷键："></a>mac平台下常用快捷键：</h2><ul>
+<li>Command+1 快速修复</li>
+<li>Command+d 删除当前行</li>
+<li>Command+单击 查看源码</li>
+<li>Command+/ 注释或反注释当前行</li>
+<li>Command+← 移动光标至当前行的行首(Mac系统快捷键，其他文本编辑通用)</li>
+<li>Command+→ 移动光标至当前行的行尾</li>
+<li>Command+Option+↓ 复制当前行到下一行</li>
+<li>Command+Option+↑ 复制当前行到上一行</li>
+<li>Command+Option+R 批量重命名</li>
+<li>Command+Option+S 快速生成代码，Getter&amp;Setter，Constructor等</li>
+<li>Option+↓ 向下移动当前行</li>
+<li>Option+↑ 向上移动当前行</li>
+<li>Option+← 上一单词</li>
+<li>Option+→ 下一单词</li>
+<li>Option+回车 显示当前选择资源的属性</li>
+<li>Option+/ 代码提示</li>
+<li>Command+Shift+O(字母) 去掉多余的import语句</li>
+<li>Command+Shit+f 格式化代码</li>
+</ul>
+<h2 id="windows平台下常用快捷键"><a href="#windows平台下常用快捷键" class="headerlink" title="windows平台下常用快捷键"></a>windows平台下常用快捷键</h2><ul>
+<li>Ctrl+1 快速修复(最经典的快捷键,就不用多说了)</li>
+<li>Ctrl+D: 删除当前行</li>
+<li>Ctrl+Alt+↓ 复制当前行到下一行(复制增加)</li>
+<li>Ctrl+Alt+↑ 复制当前行到上一行(复制增加)</li>
+<li>Alt+↓ 当前行和下面一行交互位置(特别实用,可以省去先剪切,再粘贴了)</li>
+<li>Alt+↑ 当前行和上面一行交互位置(同上)</li>
+<li>Alt+← 前一个编辑的页面</li>
+<li>Alt+→ 下一个编辑的页面(当然是针对上面那条来说了)</li>
+<li>Alt+Enter 显示当前选择资源(工程,or 文件 or文件)的属性</li>
+<li>Shift+Enter 在当前行的下一行插入空行(这时鼠标可以在当前行的任一位置,不一定是最后)</li>
+<li>Shift+Ctrl+Enter 在当前行插入空行(原理同上条)</li>
+<li>Ctrl+Q 定位到最后编辑的地方</li>
+<li>Ctrl+L 定位在某行 (对于程序超过100的人就有福音了)</li>
+<li>Ctrl+M 最大化当前的Edit或View (再按则反之)</li>
+<li>Ctrl+/ 注释当前行,再按则取消注释</li>
+<li>Ctrl+O 快速显示 OutLine</li>
+<li>Ctrl+T 快速显示当前类的继承结构</li>
+<li>Ctrl+W 关闭当前Editer</li>
+<li>Ctrl+K 参照选中的Word快速定位到下一个</li>
+<li>Ctrl+E 快速显示当前Editer的下拉列表(如果当前页面没有显示的用黑体表示)</li>
+<li>Ctrl+/(小键盘) 折叠当前类中的所有代码</li>
+<li>Ctrl+×(小键盘) 展开当前类中的所有代码</li>
+<li>Ctrl+Space 代码助手完成一些代码的插入(但一般和输入法有冲突,可以修改输入法的热键,也可以暂用Alt+/来代替)</li>
+<li>Ctrl+Shift+E 显示管理当前打开的所有的View的管理器(可以选择关闭,激活等操作)</li>
+<li>Ctrl+J 正向增量查找(按下Ctrl+J后,你所输入的每个字母编辑器都提供快速匹配定位到某个单词,如果没有,则在stutes line中显示没有找到了,查一个单词时,特别实用,这个功能Idea两年前就有了)</li>
+<li>Ctrl+Shift+J 反向增量查找(和上条相同,只不过是从后往前查)</li>
+<li>Ctrl+Shift+F4 关闭所有打开的Editer</li>
+<li>Ctrl+Shift+X 把当前选中的文本全部变味小写</li>
+<li>Ctrl+Shift+Y 把当前选中的文本全部变为小写</li>
+<li>Ctrl+Shift+F 格式化当前代码</li>
+<li>Ctrl+Shift+P 定位到对于的匹配符(譬如{}) (从前面定位后面时,光标要在匹配符里面,后面到前面,则反之)</li>
+</ul>
+<p>下面的快捷键是重构里面常用的,本人就自己喜欢且常用的整理一下(注:一般重构的快捷键都是Alt+Shift开头的了)</p>
+<ul>
+<li>Alt+Shift+R 重命名 (是我自己最爱用的一个了,尤其是变量和类的Rename,比手工方法能节省很多劳动力)</li>
+<li>Alt+Shift+M 抽取方法 (这是重构里面最常用的方法之一了,尤其是对一大堆泥团代码有用)</li>
+<li>Alt+Shift+C 修改函数结构(比较实用,有N个函数调用了这个方法,修改一次搞定)</li>
+<li>Alt+Shift+L 抽取本地变量( 可以直接把一些魔法数字和字符串抽取成一个变量,尤其是多处调用的时候)</li>
+<li>Alt+Shift+F 把Class中的local变量变为field变量 (比较实用的功能)</li>
+<li>Alt+Shift+I 合并变量(可能这样说有点不妥Inline)</li>
+<li>Alt+Shift+V 移动函数和变量(不怎么常用)</li>
+<li>Alt+Shift+Z 重构的后悔药(Undo)</li>
+</ul>
+<h3 id="编辑"><a href="#编辑" class="headerlink" title="编辑"></a>编辑</h3><ul>
+<li>作用域 功能 快捷键</li>
+<li>全局 查找并替换 Ctrl+F</li>
+<li>文本编辑器 查找上一个 Ctrl+Shift+K</li>
+<li>文本编辑器 查找下一个 Ctrl+K</li>
+<li>全局 撤销 Ctrl+Z</li>
+<li>全局 复制 Ctrl+C</li>
+<li>全局 恢复上一个选择 Alt+Shift+↓</li>
+<li>全局 剪切 Ctrl+X</li>
+<li>全局 快速修正 Ctrl1+1</li>
+<li>全局 内容辅助 Alt+/</li>
+<li>全局 全部选中 Ctrl+A</li>
+<li>全局 删除 Delete</li>
+<li>全局 上下文信息 Alt+？</li>
+<li>Alt+Shift+?</li>
+<li>Ctrl+Shift+Space</li>
+<li>Java编辑器 显示工具提示描述 F2</li>
+<li>Java编辑器 选择封装元素 Alt+Shift+↑</li>
+<li>Java编辑器 选择上一个元素 Alt+Shift+←</li>
+<li>Java编辑器 选择下一个元素 Alt+Shift+→</li>
+<li>文本编辑器 增量查找 Ctrl+J</li>
+<li>文本编辑器 增量逆向查找 Ctrl+Shift+J</li>
+<li>全局 粘贴 Ctrl+V</li>
+<li>全局 重做 Ctrl+Y</li>
+</ul>
+<h3 id="查看"><a href="#查看" class="headerlink" title="查看"></a>查看</h3><ul>
+<li>作用域 功能 快捷键</li>
+<li>全局 放大 Ctrl+=</li>
+<li>全局 缩小 Ctrl+-</li>
+</ul>
+<h3 id="窗口"><a href="#窗口" class="headerlink" title="窗口"></a>窗口</h3><ul>
+<li>作用域 功能 快捷键</li>
+<li>全局 激活编辑器 F12</li>
+<li>全局 上一个编辑器 Ctrl+Shift+F6</li>
+<li>全局 切换编辑器 Ctrl+Shift+W</li>
+<li>全局 上一个视图 Ctrl+Shift+F7</li>
+<li>全局 上一个透视图 Ctrl+Shift+F8</li>
+<li>全局 下一个编辑器 Ctrl+F6</li>
+<li>全局 下一个视图 Ctrl+F7</li>
+<li>全局 下一个透视图 Ctrl+F8</li>
+<li>文本编辑器 显示标尺上下文菜单 Ctrl+W</li>
+<li>全局 显示视图菜单 Ctrl+F10</li>
+<li>全局 显示系统菜单 Alt+-</li>
+</ul>
+<h3 id="导航"><a href="#导航" class="headerlink" title="导航"></a>导航</h3><ul>
+<li>作用域 功能 快捷键</li>
+<li>Java编辑器 打开结构 Ctrl+F3</li>
+<li>全局 打开类型 Ctrl+Shift+T</li>
+<li>全局 打开类型层次结构 F4</li>
+<li>全局 打开声明 F3</li>
+<li>全局 打开外部javadoc Shift+F2</li>
+<li>全局 打开资源 Ctrl+Shift+R</li>
+<li>全局 后退历史记录 Alt+←</li>
+<li>全局 前进历史记录 Alt+→</li>
+<li>全局 上一个 Ctrl+,</li>
+<li>全局 下一个 Ctrl+.</li>
+<li>Java编辑器 显示大纲 Ctrl+O</li>
+<li>全局 在层次结构中打开类型 Ctrl+Shift+H</li>
+<li>全局 转至匹配的括号 Ctrl+Shift+P</li>
+<li>全局 转至上一个编辑位置 Ctrl+Q</li>
+<li>Java编辑器 转至上一个成员 Ctrl+Shift+↑</li>
+<li>Java编辑器 转至下一个成员 Ctrl+Shift+↓</li>
+<li>文本编辑器 转至行 Ctrl+L</li>
+</ul>
+<h3 id="搜索"><a href="#搜索" class="headerlink" title="搜索"></a>搜索</h3><ul>
+<li>作用域 功能 快捷键</li>
+<li>全局 出现在文件中 Ctrl+Shift+U</li>
+<li>全局 打开搜索对话框 Ctrl+H</li>
+<li>全局 工作区中的声明 Ctrl+G</li>
+<li>全局 工作区中的引用 Ctrl+Shift+G</li>
+</ul>
+<h3 id="文本编辑"><a href="#文本编辑" class="headerlink" title="文本编辑"></a>文本编辑</h3><ul>
+<li>作用域 功能 快捷键</li>
+<li>文本编辑器 改写切换 Insert</li>
+<li>文本编辑器 上滚行 Ctrl+↑</li>
+<li>文本编辑器 下滚行 Ctrl+↓</li>
+</ul>
+<h3 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h3><ul>
+<li>作用域 功能 快捷键</li>
+<li>全局 保存 Ctrl+X</li>
+<li>Ctrl+S</li>
+<li>全局 打印 Ctrl+P</li>
+<li>全局 关闭 Ctrl+F4</li>
+<li>全局 全部保存 Ctrl+Shift+S</li>
+<li>全局 全部关闭 Ctrl+Shift+F4</li>
+<li>全局 属性 Alt+Enter</li>
+<li>全局 新建 Ctrl+N</li>
+</ul>
+<h3 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h3><ul>
+<li>作用域 功能 快捷键</li>
+<li>全局 全部构建 Ctrl+B</li>
+</ul>
+<h3 id="源代码"><a href="#源代码" class="headerlink" title="源代码"></a>源代码</h3><ul>
+<li>作用域 功能 快捷键</li>
+<li>Java编辑器 格式化 Ctrl+Shift+F</li>
+<li>Java编辑器 取消注释 Ctrl+\</li>
+<li>Java编辑器 注释 Ctrl+/</li>
+<li>Java编辑器 添加导入 Ctrl+Shift+M</li>
+<li>Java编辑器 组织导入 Ctrl+Shift+O</li>
+<li>Java编辑器 使用try/catch块来包围 未设置，太常用了，所以在这里列出,建议自己设置。也可以使用Ctrl+1自动修正。</li>
+</ul>
+<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><ul>
+<li>作用域 功能 快捷键</li>
+<li>全局 单步返回 F7</li>
+<li>全局 单步跳过 F6</li>
+<li>全局 单步跳入 F5</li>
+<li>全局 单步跳入选择 Ctrl+F5</li>
+<li>全局 调试上次启动 F11</li>
+<li>全局 继续 F8</li>
+<li>全局 使用过滤器单步执行 Shift+F5</li>
+<li>全局 添加/去除断点 Ctrl+Shift+B</li>
+<li>全局 显示 Ctrl+D</li>
+<li>全局 运行上次启动 Ctrl+F11</li>
+<li>全局 运行至行 Ctrl+R</li>
+<li>全局 执行 Ctrl+U</li>
+</ul>
+<h3 id="重构"><a href="#重构" class="headerlink" title="重构"></a>重构</h3><ul>
+<li>作用域 功能 快捷键</li>
+<li>全局 撤销重构 Alt+Shift+Z</li>
+<li>全局 抽取方法 Alt+Shift+M</li>
+<li>全局 抽取局部变量 Alt+Shift+L</li>
+<li>全局 内联 Alt+Shift+I</li>
+<li>全局 移动 Alt+Shift+V</li>
+<li>全局 重命名 Alt+Shift+R</li>
+<li>全局 重做 Alt+Shift+Y</li>
+</ul>
+<h1 id="IDEA快捷键"><a href="#IDEA快捷键" class="headerlink" title="IDEA快捷键"></a>IDEA快捷键</h1><h2 id="自动代码"><a href="#自动代码" class="headerlink" title="自动代码"></a>自动代码</h2><p>常用的有fori/sout/psvm+Tab即可生成循环、System.out、main方法等boilerplate样板代码<br>例如要输入for(User user : users)只需输入user.for+Tab<br>再比如，要输入Date birthday = user.getBirthday();只需输入user.getBirthday().var+Tab即可。代码标签输入完成后，按Tab，生成代码。</p>
+<ul>
+<li>Ctrl+Alt+O 优化导入的类和包</li>
+<li>Alt+Insert 生成代码(如get,set方法,构造函数等)   或者右键（Generate）</li>
+<li>fori/sout/psvm + Tab  </li>
+<li>Ctrl+Alt+T  生成try catch  或者 Alt+enter</li>
+<li>CTRL+ALT+T  把选中的代码放在 TRY{} IF{} ELSE{} 里</li>
+<li>Ctrl + O 重写方法  </li>
+<li>Ctrl + I 实现方法</li>
+<li>Ctr+shift+U 大小写转化  </li>
+<li>ALT+回车    导入包,自动修正  </li>
+<li>ALT+/       代码提示</li>
+<li>CTRL+J      自动代码  </li>
+<li>Ctrl+Shift+J，整合两行为一行</li>
+<li>CTRL+空格   代码提示  </li>
+<li>CTRL+SHIFT+SPACE 自动补全代码  </li>
+<li>CTRL+ALT+L  格式化代码  </li>
+<li>CTRL+ALT+I  自动缩进  </li>
+<li>CTRL+ALT+O  优化导入的类和包  </li>
+<li>ALT+INSERT  生成代码(如GET,SET方法,构造函数等)  </li>
+<li>CTRL+E      最近更改的代码  </li>
+<li>CTRL+ALT+SPACE  类名或接口名提示  </li>
+<li>CTRL+P   方法参数提示  </li>
+<li>CTRL+Q，可以看到当前方法的声明</li>
+<li>Shift+F6  重构-重命名 (包、类、方法、变量、甚至注释等)</li>
+<li>Ctrl+Alt+V 提取变量</li>
+</ul>
+<h2 id="查询快捷键"><a href="#查询快捷键" class="headerlink" title="查询快捷键"></a>查询快捷键</h2><ul>
+<li>Ctrl＋Shift＋Backspace可以跳转到上次编辑的地</li>
+<li>CTRL+ALT+ left/right 前后导航编辑过的地方</li>
+<li>ALT+7  靠左窗口显示当前文件的结构</li>
+<li>Ctrl+F12 浮动显示当前文件的结构</li>
+<li>ALT+F7 找到你的函数或者变量或者类的所有引用到的地方</li>
+<li>CTRL+ALT+F7  找到你的函数或者变量或者类的所有引用到的地方</li>
+<li>Ctrl+Shift+Alt+N 查找类中的方法或变量</li>
+<li>双击SHIFT 在项目的所有目录查找文件</li>
+<li>Ctrl+N   查找类</li>
+<li>Ctrl+Shift+N 查找文件</li>
+<li>CTRL+G   定位行  </li>
+<li>CTRL+F   在当前窗口查找文本  </li>
+<li>CTRL+SHIFT+F  在指定窗口查找文本  </li>
+<li>CTRL+R   在 当前窗口替换文本  </li>
+<li>CTRL+SHIFT+R  在指定窗口替换文本  </li>
+<li>ALT+SHIFT+C  查找修改的文件  </li>
+<li>CTRL+E   最近打开的文件  </li>
+<li>F3   向下查找关键字出现位置  </li>
+<li>SHIFT+F3  向上一个关键字出现位置  </li>
+<li>选中文本，按Alt+F3 ，高亮相同文本，F3逐个往下查找相同文本</li>
+<li>F4   查找变量来源  </li>
+<li>CTRL+SHIFT+O  弹出显示查找内容</li>
+<li>Ctrl+W 选中代码，连续按会有其他效果</li>
+<li>F2 或Shift+F2 高亮错误或警告快速定位</li>
+<li>Ctrl+Up/Down 光标跳转到第一行或最后一行下</li>
+<li>Ctrl+B 快速打开光标处的类或方法  </li>
+<li>CTRL+ALT+B  找所有的子类  </li>
+<li>CTRL+SHIFT+B  找变量的类  </li>
+<li>Ctrl+Shift+上下键  上下移动代码</li>
+<li>Ctrl+Alt+ left/right 返回至上次浏览的位置</li>
+<li>Ctrl+X 删除行</li>
+<li>Ctrl+D 复制行</li>
+<li>Ctrl+/ 或 Ctrl+Shift+/  注释（// 或者/<em>…</em>/ ）</li>
+<li>Ctrl+H 显示类结构图</li>
+<li>Ctrl+Q 显示注释文档</li>
+<li>Alt+F1 查找代码所在位置</li>
+<li>Alt+1 快速打开或隐藏工程面板</li>
+<li>Alt+ left/right 切换代码视图</li>
+<li>ALT+ ↑/↓  在方法间快速移动定位  </li>
+<li>CTRL+ALT+ left/right 前后导航编辑过的地方</li>
+<li>Ctrl＋Shift＋Backspace可以跳转到上次编辑的地</li>
+<li>Alt+6    查找TODO</li>
+</ul>
+<h2 id="其他快捷键"><a href="#其他快捷键" class="headerlink" title="其他快捷键"></a>其他快捷键</h2><ul>
+<li>SHIFT+ENTER 另起一行</li>
+<li>CTRL+Z   倒退(撤销)</li>
+<li>CTRL+SHIFT+Z  向前(取消撤销)</li>
+<li>CTRL+ALT+F12  资源管理器打开文件夹  </li>
+<li>ALT+F1   查找文件所在目录位置  </li>
+<li>SHIFT+ALT+INSERT 竖编辑模式  </li>
+<li>CTRL+F4  关闭当前窗口</li>
+<li>Ctrl+Alt+V，可以引入变量。例如：new String(); 自动导入变量定义</li>
+<li>Ctrl+~，快速切换方案（界面外观、代码风格、快捷键映射等菜单）</li>
+</ul>
+<h2 id="调试快捷键"><a href="#调试快捷键" class="headerlink" title="调试快捷键"></a>调试快捷键</h2><p>其实常用的 就是F8 F7 F9 最值得一提的 就是Drop Frame  可以让运行过的代码从头再来</p>
+<ul>
+<li>alt+F8          debug时选中查看值</li>
+<li>Alt+Shift+F9，选择 Debug</li>
+<li>Alt+Shift+F10，选择 Run</li>
+<li>Ctrl+Shift+F9，编译</li>
+<li>Ctrl+Shift+F8，查看断点</li>
+<li>F7，步入</li>
+<li>Shift+F7，智能步入</li>
+<li>Alt+Shift+F7，强制步入</li>
+<li>F8，步过</li>
+<li>Shift+F8，步出</li>
+<li>Alt+Shift+F8，强制步过</li>
+<li>Alt+F9，运行至光标处</li>
+<li>Ctrl+Alt+F9，强制运行至光标处</li>
+<li>F9，恢复程序</li>
+<li>Alt+F10，定位到断点<h2 id="重构-1"><a href="#重构-1" class="headerlink" title="重构"></a>重构</h2></li>
+<li>Ctrl+Alt+Shift+T，弹出重构菜单</li>
+<li>Shift+F6，重命名</li>
+<li>F6，移动</li>
+<li>F5，复制</li>
+<li>Alt+Delete，安全删除</li>
+<li>Ctrl+Alt+N，内联</li>
+</ul>
+<h2 id="十大Intellij-IDEA快捷键"><a href="#十大Intellij-IDEA快捷键" class="headerlink" title="十大Intellij IDEA快捷键"></a>十大Intellij IDEA快捷键</h2><p>Intellij IDEA中有很多快捷键让人爱不释手，stackoverflow上也有一些有趣的讨论。每个人都有自己的最爱，想排出个理想的榜单还真是困难。<br>以前也整理过Intellij的快捷键，这次就按照我日常开发时的使用频率，简单分类列一下我最喜欢的十大快捷-神-键吧。</p>
+<ol>
+<li>智能提示:</li>
+</ol>
+<p>Intellij首当其冲的当然就是Intelligence智能！基本的代码提示用Ctrl+Space，还有更智能地按类型信息提示Ctrl+Shift+Space，但因为Intellij总是随着我们敲击而自动提示，所以很多时候都不会手动敲这两个快捷键(除非提示框消失了)。用F2/ Shift+F2移动到有错误的代码，Alt+Enter快速修复(即Eclipse中的Quick Fix功能)。当智能提示为我们自动补全方法名时，我们通常要自己补上行尾的反括号和分号，当括号嵌套很多层时会很麻烦，这时我们只需敲Ctrl+Shift+Enter就能自动补全末尾的字符。而且不只是括号，例如敲完if/for时也可以自动补上{}花括号。<br>最后要说一点，Intellij能够智能感知Spring、Hibernate等主流框架的配置文件和类，以静制动，在看似“静态”的外表下，智能地扫描理解你的项目是如何构造和配置的。</p>
+<ol start="2">
+<li>重构:<br>Intellij重构是另一完爆Eclipse的功能，其智能程度令人瞠目结舌，比如提取变量时自动检查到所有匹配同时提取成一个变量等。尤其看过《重构-改善既有代码设计》之后，有了Intellij的配合简直是令人大呼过瘾！也正是强大的智能和重构功能，使Intellij下的TDD开发非常顺畅。</li>
+</ol>
+<p>切入正题，先说一个无敌的重构功能大汇总快捷键Ctrl+Shift+Alt+T，叫做Refactor This。按法有点复杂，但也符合Intellij的风格，很多快捷键都要双手完成，而不像Eclipse不少最有用的快捷键可以潇洒地单手完成(不知道算不算Eclipse的一大优点)，但各位用过Emacs的话就会觉得也没什么了(非Emacs黑)。此外，还有些最常用的重构技巧，因为太常用了，若每次都在Refactor This菜单里选的话效率有些低。比如Shift+F6直接就是改名，Ctrl+Alt+V则是提取变量。</p>
+<ol start="3">
+<li>代码生成：<br>这一点类似Eclipse，虽不是独到之处，但因为日常使用频率极高，所以还是罗列在榜单前面。常用的有fori/sout/psvm+Tab即可生成循环、System.out、main方法等boilerplate样板代码，用Ctrl+J可以查看所有模板。后面“辅助”一节中将会讲到Alt+Insert，在编辑窗口中点击可以生成构造函数、toString、getter/setter、重写父类方法等。这两个技巧实在太常用了，几乎每天都要生成一堆main、System.out和getter/setter。</li>
+</ol>
+<p>另外，Intellij IDEA 13中加入了后缀自动补全功能(Postfix Completion)，比模板生成更加灵活和强大。例如要输入for(User user : users)只需输入user.for+Tab。再比如，要输入Date birthday = user.getBirthday();只需输入user.getBirthday().var+Tab即可。</p>
+<ol start="4">
+<li>编辑：<br>编辑中不得不说的一大神键就是能够自动按语法选中代码的Ctrl+W以及反向的Ctrl+Shift+W了。此外，Ctrl+Left/Right移动光标到前/后单词，Ctrl+[/]移动到前/后代码块，这些类Vim风格的光标移动也是一大亮点。以上Ctrl+Left/Right/[]加上Shift的话就能选中跳跃范围内的代码。Alt+Forward/Backward移动到前/后方法。还有些非常普通的像Ctrl+Y删除行、Ctrl+D复制行、Ctrl+&lt;/&gt;折叠代码就不多说了。</li>
+</ol>
+<p>关于光标移动再多扩展一点，除了Intellij本身已提供的功能外，我们还可以安装ideaVim或者emacsIDEAs享受到Vim的快速移动和Emacs的AceJump功能(超爽！)。另外，Intellij的书签功能也是不错的，用Ctrl+Shift+Num定义1-10书签(再次按这组快捷键则是删除书签)，然后通过Ctrl+Num跳转。这避免了多次使用前/下一编辑位置Ctrl+Left/Right来回跳转的麻烦，而且此快捷键默认与Windows热键冲突(默认多了Alt，与Windows改变显示器显示方向冲突，一不小心显示器就变成倒着显式的了，冏啊)。</p>
+<ol start="5">
+<li>查找打开：</li>
+</ol>
+<p>类似Eclipse，Intellij的Ctrl+N/Ctrl+Shift+N可以打开类或资源，但Intellij更加智能一些，我们输入的任何字符都将看作模糊匹配，省却了Eclipse中还有输入*的麻烦。最新版本的IDEA还加入了Search Everywhere功能，只需按Shift+Shift即可在一个弹出框中搜索任何东西，包括类、资源、配置项、方法等等。</p>
+<p>类的继承关系则可用Ctrl+H打开类层次窗口，在继承层次上跳转则用Ctrl+B/Ctrl+Alt+B分别对应父类或父方法定义和子类或子方法实现，查看当前类的所有方法用Ctrl+F12。</p>
+<p>要找类或方法的使用也很简单，Alt+F7。要查找文本的出现位置就用Ctrl+F/Ctrl+Shift+F在当前窗口或全工程中查找，再配合F3/Shift+F3前后移动到下一匹配处。</p>
+<p>Intellij更加智能的又一佐证是在任意菜单或显示窗口，都可以直接输入你要找的单词，Intellij就会自动为你过滤。</p>
+<ol start="6">
+<li>其他辅助：</li>
+</ol>
+<p>以上这些神键配上一些辅助快捷键，即可让你的双手90%以上的时间摆脱鼠标，专注于键盘仿佛在进行钢琴表演。这些不起眼却是至关重要的最后一块拼图有：</p>
+<p>Ø  命令：Ctrl+Shift+A可以查找所有Intellij的命令，并且每个命令后面还有其快捷键。所以它不仅是一大神键，也是查找学习快捷键的工具。<br>Ø  新建：Alt+Insert可以新建类、方法等任何东西。<br>Ø  格式化代码：格式化import列表Ctrl+Alt+O，格式化代码Ctrl+Alt+L。<br>Ø  切换窗口：Alt+Num，常用的有1-项目结构，3-搜索结果，4/5-运行调试。Ctrl+Tab切换标签页，Ctrl+E/Ctrl+Shift+E打开最近打开过的或编辑过的文件。<br>Ø  单元测试：Ctrl+Alt+T创建单元测试用例。<br>Ø  运行：Alt+Shift+F10运行程序，Shift+F9启动调试，Ctrl+F2停止。<br>Ø  调试：F7/F8/F9分别对应Step into，Step over，Continue。<br>此外还有些我自定义的，例如水平分屏Ctrl+|等，和一些神奇的小功能Ctrl+Shift+V粘贴很早以前拷贝过的，Alt+Shift+Insert进入到列模式进行按列选中。<br>Ø  Top #10切来切去：Ctrl+Tab<br>Ø  Top #9选你所想：Ctrl+W<br>Ø  Top #8代码生成：Template/Postfix +Tab<br>Ø  Top #7发号施令：Ctrl+Shift+A<br>Ø  Top #6无处藏身：Shift+Shift<br>Ø  Top #5自动完成：Ctrl+Shift+Enter<br>Ø  Top #4创造万物：Alt+Insert<br>太难割舍，前三名并列吧！<br>Ø  Top #1智能补全：Ctrl+Shift+Space<br>Ø  Top #1自我修复：Alt+Enter<br>Ø  Top #1重构一切：Ctrl+Shift+Alt+T<br>CTRL+ALT+ left/right 前后导航编辑过的地方<br>Ctrl＋Shift＋Backspace可以跳转到上次编辑的地</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        
+          
+        
+        <div class="post-tags">
+          
+            <a href="/tags/实用快捷键/" rel="tag"># 实用快捷键</a>
+          
+        </div>
+      
+
+      
+      
+        <div class="post-widgets">
+        
+
+        
+
+        
+          
+          <div class="social_share">
+            
+            
+              <div id="needsharebutton-postbottom">
+                <span class="btn">
+                  <i class="fa fa-share-alt" aria-hidden="true"></i>
+                </span>
+              </div>
+            
+            
+          </div>
+        
+        </div>
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/12/10/springcloudeurekaserver/" rel="next" title="SpringCloudLearn系列（一）：服务注册中心eureka版">
+                <i class="fa fa-chevron-left"></i> SpringCloudLearn系列（一）：服务注册中心eureka版
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/12/17/springcloudconsulclient/" rel="prev" title="SpringCloudLearn系列（二）：服务注册consul版">
+                SpringCloudLearn系列（二）：服务注册consul版 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Aaron</p>
+              <div class="site-description motion-element" itemprop="description">经验不是经历。用别人的经验解决一个问题不难，难的是自己从头走一遍这条路，更加难的是推翻前人的经验对一个问题能够有自己的看法和领悟。</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">18</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">11</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">17</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/pengjieran" title="GitHub &rarr; https://github.com/pengjieran" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:pengjieran@gmail.com" title="E-Mail &rarr; mailto:pengjieran@gmail.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#eclipse快捷键"><span class="nav-number">1.</span> <span class="nav-text">eclipse快捷键</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#mac平台下常用快捷键："><span class="nav-number">1.1.</span> <span class="nav-text">mac平台下常用快捷键：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#windows平台下常用快捷键"><span class="nav-number">1.2.</span> <span class="nav-text">windows平台下常用快捷键</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#编辑"><span class="nav-number">1.2.1.</span> <span class="nav-text">编辑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#查看"><span class="nav-number">1.2.2.</span> <span class="nav-text">查看</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#窗口"><span class="nav-number">1.2.3.</span> <span class="nav-text">窗口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#导航"><span class="nav-number">1.2.4.</span> <span class="nav-text">导航</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#搜索"><span class="nav-number">1.2.5.</span> <span class="nav-text">搜索</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文本编辑"><span class="nav-number">1.2.6.</span> <span class="nav-text">文本编辑</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#文件"><span class="nav-number">1.2.7.</span> <span class="nav-text">文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#项目"><span class="nav-number">1.2.8.</span> <span class="nav-text">项目</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#源代码"><span class="nav-number">1.2.9.</span> <span class="nav-text">源代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行"><span class="nav-number">1.2.10.</span> <span class="nav-text">运行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重构"><span class="nav-number">1.2.11.</span> <span class="nav-text">重构</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IDEA快捷键"><span class="nav-number">2.</span> <span class="nav-text">IDEA快捷键</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#自动代码"><span class="nav-number">2.1.</span> <span class="nav-text">自动代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#查询快捷键"><span class="nav-number">2.2.</span> <span class="nav-text">查询快捷键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#其他快捷键"><span class="nav-number">2.3.</span> <span class="nav-text">其他快捷键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#调试快捷键"><span class="nav-number">2.4.</span> <span class="nav-text">调试快捷键</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#重构-1"><span class="nav-number">2.5.</span> <span class="nav-text">重构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#十大Intellij-IDEA快捷键"><span class="nav-number">2.6.</span> <span class="nav-text">十大Intellij IDEA快捷键</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">  <a href="http://www.beian.miit.gov.cn" rel="noopener" target="_blank">京ICP备19014034号-1 </a>&copy; 2016 – <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Aaron</span>
+
+  
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+      <div id="needsharebutton-float">
+        <span class="btn">
+          <i class="fa fa-share-alt" aria-hidden="true"></i>
+        </span>
+      </div>
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.2"></script>
+
+  <script src="/js/motion.js?v=7.1.2"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.2"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.2"></script>
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.2"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: '54FEjnBw1Vcjtpi6iegek828-gzGzoHsz',
+    appKey: 'QA1eF4PqJGC5QszpoXY190Ow',
+    placeholder: 'Just go go',
+    avatar: 'mm',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: true,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+
+  
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+  
+
+  
+  
+  
+  <script src="/lib/needsharebutton/needsharebutton.js"></script>
+  <script>
+    
+      pbOptions = {};
+      
+        pbOptions.iconStyle = "box";
+      
+        pbOptions.boxForm = "horizontal";
+      
+        pbOptions.position = "bottomCenter";
+      
+        pbOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-postbottom', pbOptions);
+    
+    
+      flOptions = {};
+      
+        flOptions.iconStyle = "box";
+      
+        flOptions.boxForm = "horizontal";
+      
+        flOptions.position = "middleRight";
+      
+        flOptions.networks = "Weibo,Wechat,Douban,QQZone,Twitter,Facebook";
+      
+      new needShareButton('#needsharebutton-float', flOptions);
+    
+  </script>
+
+
+  
+
+  
+
+  
+  
+  
+  <script src="/lib/bookmark/bookmark.min.js?v=1.0"></script>
+  <script>
+  
+    bookmark.scrollToMark('auto', "#更多");
+  
+  </script>
+
+
+  
+
+  
+
+  
+
+</body>
+</html>
